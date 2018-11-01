@@ -14,6 +14,9 @@ import {UnauthenticatedInterceptor} from './unauthenticated.interceptor';
 import {AlertService} from './alert/alert.service';
 import { HomeComponent } from './home/home.component';
 import {RegisterComponent} from './login/register.component';
+import { GroupsComponent } from './groups/groups.component';
+import {GroupsService} from './groups/groups.service';
+import { GroupsCreateComponent } from './groups-create.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import {RegisterComponent} from './login/register.component';
     LoginComponent,
     RegisterComponent,
     AlertComponent,
-    HomeComponent
+    HomeComponent,
+    GroupsComponent,
+    GroupsCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +38,7 @@ import {RegisterComponent} from './login/register.component';
     AuthenticationService,
     AlertService,
     AuthGuard,
+    GroupsService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: UnauthenticatedInterceptor, multi: true },
   ],

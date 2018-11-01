@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   authUrl: 'http://localhost:8000',
+  groupsUrl: 'http://localhost:9000',
 };
 
 /*
